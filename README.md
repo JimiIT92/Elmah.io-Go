@@ -5,7 +5,7 @@
 </p>
 
 # Elmah.io-Go
-Log errors on elmah.io from Go(lang) web applications.
+Log errors on [elmah.io](https://elmah.io) from Go(lang) web applications.
 
 -------------------------
 - [Introduction](#introduction)
@@ -19,21 +19,21 @@ Log errors on elmah.io from Go(lang) web applications.
 -------------------------
 ## Introduction
 
-This package <b>IS NOT OFFICIAL</b>, meaning that nor the Elmah.io team or any of their developers have worked on this.
-This is just a user made package to start logging errors on Elmah.io, waiting for an official Go(lang) package.
-This means that i'm not affiliated with Elmah.io in any means, and therefore any bug or missing feature on the package are not Elmah.io's fault.
+This package <b>IS NOT OFFICIAL</b>, meaning that nor the elmah.io team or any of their developers have worked on this.
+This is just a user made package to start logging errors on elmah.io, waiting for an official Go(lang) package.
+This means that i'm not affiliated with elmah.io in any means, and therefore any bug or missing feature on the package are not elmah.io's fault.
 
-Also, this package gives just the raw basics for logging errors on Elmah.io. For my personal use this is fine, however you can suggest changes or even contributing to them as described in the [Feedback](#feedback) section of this file.
+Also, this package gives just the raw basics for logging errors on elmah.io. For my personal use this is fine, however you can suggest changes or even contributing to them as described in the [Feedback](#feedback) section of this file.
 
 -------------------------
 ## Requirements
 
 - Go 1.10 or higher. Although this package has no dependencies, so it should work on all versions of Go, is always recommended to have the latest version of the language installed.
-- An <a href="https://elmah.io/" target="_blank">Elmah.io account</a>
+- An <a href="https://app.elmah.io/signup/" target="_blank">elmah.io account</a>
 -------------------------
 ## Installation
 
-The recommended way to get started using the Elmah.io Go package is by using `dep` to install the dependency in your project.
+The recommended way to get started using the elmah.io Go package is by using `dep` to install the dependency in your project.
 
 ```bash
 dep ensure -add "github.com/jimiit92/elmah.io-go@~1.0.0"
@@ -55,7 +55,7 @@ You can also setup the Application Version and the Application Source using the 
 elmahio.SetVersion(1.0)
 elmahio.SetSource("Application Source")
 ```
-To log the erorr on Elmah.io automatically from a web function, you need to declare the function like this:
+To log the erorr on elmah.io automatically from a web function, you need to declare the function like this:
 ```go
 func handler(w http.ResponseWriter, r *http.Request) (*http.Response, error) {
 // Do something and return a response,error pair
@@ -67,7 +67,7 @@ router.Handle("/", elmahio.ElmahHandler(handler))
 ```
 ### Example application
 
-<a href="/examples/example.go">Here </a>is listed and example application that uses the Elmah.io package and writes an error on Elmah.io. The project uses the <a href="https://github.com/gorilla/mux" target="_blank">gorilla/mux package</a> to create a rotuer and handle the route, however you are free to use any router package you want (or even none) as long as the handler function declaration remains the same and you can wrap it inside the  `ElmahHandler` middleware
+<a href="/examples/example.go">Here </a>is listed and example application that uses the elmah.io package and writes an error on elmah.io. The project uses the <a href="https://github.com/gorilla/mux" target="_blank">gorilla/mux package</a> to create a rotuer and handle the route, however you are free to use any router package you want (or even none) as long as the handler function declaration remains the same and you can wrap it inside the `ElmahHandler` middleware
 
 -------------------------
 ## Bugs / Feature Reporting
@@ -77,9 +77,9 @@ New Features and bugs can be reported on the <a href="https://github.com/JimiIT9
 -------------------------
 ## Feedback
 
-The Elmah.io package is not feature complete, so any help is appreciated. You can clone and edit this repository to add as many features as you want. Keep in mind that each commit will be reviewed in order to mantain this package healty and to avoid malicious or un-necessary code. See our [contribution guidelines](CONTRIBUTING.md) for details.
+The elmah.io package is not feature complete, so any help is appreciated. You can clone and edit this repository to add as many features as you want. Keep in mind that each commit will be reviewed in order to mantain this package healty and to avoid malicious or un-necessary code. See our [contribution guidelines](CONTRIBUTING.md) for details.
 
 -------------------------
 ## License
 
-The Elmah.io package is licensed under the [MIT License](LICENSE).
+The elmah.io package is licensed under the [MIT License](LICENSE).
